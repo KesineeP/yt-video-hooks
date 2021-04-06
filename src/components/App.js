@@ -9,11 +9,11 @@ const App = () => {
     const [videos, search] = useVideos('buildings');
 
     useEffect(() => {
-        setSelectedVideo(response.data.items[0]);
+        setSelectedVideo(videos[0]);
     }, [videos])
 
     return (
-        <div>
+        <div className="ui container">
             <SearchBar onFormSubmit={search} />
             <div className="ui grid">
                 <div className="ui row">
